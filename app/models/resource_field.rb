@@ -1,0 +1,2 @@
+class ResourceField < ApplicationRecord
+end
