@@ -1,4 +1,4 @@
-class Api::V1::Dashboard::ResourceActionsController < ApplicationController
+class Api::V1::Dashboard::ResourceActionsController < Api::V1::ApplicationController
   before_action :set_resource_action, only: %i[ show edit update destroy ]
 
   # GET /resource_actions or /resource_actions.json

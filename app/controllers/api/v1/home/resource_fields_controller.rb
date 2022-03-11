@@ -1,5 +1,4 @@
-class Api::V1::Home::ResourceFieldsController < ApplicationController
-  before_action :set_resource_field, only: %i[ show edit update destroy ]
+class Api::V1::Home::ResourceFieldsController < Api::V1::ApplicationController
 
   # GET /resource_fields or /resource_fields.json
   def index
@@ -59,12 +58,12 @@ class Api::V1::Home::ResourceFieldsController < ApplicationController
 
   private
   # Use callbacks to share common setup or constraints between actions.
-  def set_resource_field
-    @resource_field = ResourceField.find(params[:id])
-  end
+  # def set_resource_field
+  #   @resource_field = ResourceField.find(params[:id])
+  # end
 
   # Only allow a list of trusted parameters through.
-  def resource_field_params
-    params.require(:resource_field).permit(:name, :type)
-  end
+  # def resource_field_params
+  #   params.require(:resource_field).permit(:name, :type)
+  # end
 end

@@ -1,5 +1,4 @@
-class Api::V1::Home::ResourceActionsController < ApplicationController
-  before_action :set_resource_action, only: %i[ show edit update destroy ]
+class Api::V1::Home::ResourceActionsController < Api::V1::ApplicationController
 
   # GET /resource_actions or /resource_actions.json
   def index
@@ -59,12 +58,12 @@ class Api::V1::Home::ResourceActionsController < ApplicationController
 
   private
   # Use callbacks to share common setup or constraints between actions.
-  def set_resource_action
-    @resource_action = ResourceAction.find(params[:id])
-  end
+  # def set_resource_action
+  #   @resource_action = ResourceAction.find(params[:id])
+  # end
 
   # Only allow a list of trusted parameters through.
-  def resource_action_params
-    params.require(:resource_action).permit(:name, :class_identification)
-  end
+  # def resource_action_params
+  #   params.require(:resource_action).permit(:name, :class_identification)
+  # end
 end
